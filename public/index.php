@@ -1,17 +1,54 @@
 <?php
 
-use Core\Creational\Builder\Conceptual\Request\BuilderRequest;
-use Core\Creational\Builder\Conceptual\Request\MethodsEnum;
+// use Core\Creational\Builder\Practical\Address;
+// use Core\Creational\Builder\Practical\Enums\Role;
+// use Core\Creational\Builder\Practical\Phone;
+// use Core\Creational\Builder\Practical\User;
+
+use Core\Creational\Builder\Practical\Enums\Role;
+use Core\Creational\Builder\Practical\UserBuilder;
 
 require_once '../vendor/autoload.php';
 
-// $request = new BuilderRequest;
-// $request->url('http://localhost:8080/api/v1/users');
-// $request->method(MethodsEnum::GET);
-// $request->payload(['filters' => 'sdfsd']);
-// $request->build();
-
-$request = (new BuilderRequest)
-            ->url('http://localhost:8080/api/v1/users')
-            ->method(MethodsEnum::GET)
+// $carlosFounder = new User(
+//     firstName: 'Carlos',
+//     lastName: 'Ferreira',
+//     email: 'carlos@especializati.com.br',
+//     age: 29,
+//     role: Role::F,
+// );
+// $carlosFounder->setAddress(
+//     new Address(
+//         street: 'Rua x',
+//         city: 'City X',
+//         state: 'State X',
+//         postalCode: 5757009,
+//         country: 'BR',
+//     )
+// );
+// $carlosFounder->setPhone(
+//     new Phone(
+//         ddd: 64,
+//         number: 981701406,
+//     )
+// );
+$user = (new UserBuilder)
+            ->addBasicInfo(
+                firstName: 'Carlos',
+                lastName: 'Ferreira',
+                email: 'carlos@especializati.com.br',
+                age: 29,
+                role: Role::F,
+            )
+            ->addAddress(
+                street: 'Rua x',
+                city: 'City X',
+                state: 'State X',
+                postalCode: 5757009,
+                country: 'BR',
+            )
+            ->addPhone(
+                ddd: 64,
+                number: 981701406,
+            )
             ->build();
