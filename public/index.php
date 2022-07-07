@@ -7,7 +7,7 @@
 
 use Core\Creational\Builder\Practical\Enums\Role;
 use Core\Creational\Builder\Practical\UserBuilder;
-use Core\Creational\Singleton\Conceitual\Singleton;
+use Core\Creational\Singleton\Conceptual\Singleton;
 
 require_once '../vendor/autoload.php';
 

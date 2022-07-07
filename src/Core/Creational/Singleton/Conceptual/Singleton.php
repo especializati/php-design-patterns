@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Creational\Singleton\Conceitual;
+namespace Core\Creational\Singleton\Conceptual;
 
 use Exception;
 
