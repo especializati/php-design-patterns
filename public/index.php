@@ -7,6 +7,7 @@
 
 use Core\Creational\Builder\Practical\Enums\Role;
 use Core\Creational\Builder\Practical\UserBuilder;
+use Core\Creational\Singleton\Practical\DbConnection;
 use Core\Creational\Singleton\Conceptual\Singleton;
 
 require_once '../vendor/autoload.php';
@@ -57,6 +58,20 @@ require_once '../vendor/autoload.php';
 /**
  * Singleton Conceitual
  */
-$instanceA = Singleton::getInstance();
-$instanceB = Singleton::getInstance();
-var_dump($instanceA === $instanceB);
+// $instanceA = Singleton::getInstance();
+// $instanceB = Singleton::getInstance();
+// var_dump($instanceA === $instanceB);
+
+// $instance = DbConnection::getInstance();
+// DbConnection::getInstance();
+// DbConnection::getInstance();
+// DbConnection::getInstance();
+// DbConnection::getInstance();
+// DbConnection::getInstance();
+
+DbConnection::getConnection();
+DbConnection::getConnection();
+DbConnection::getConnection();
+DbConnection::getConnection();
+DbConnection::getConnection();
+DbConnection::getConnection();
